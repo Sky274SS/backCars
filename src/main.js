@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 
 const api = require('./api');
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8000;
 
 const app = express();
 app.use(express.json());
@@ -24,7 +24,7 @@ app.use(api);
 
 async function start(){
     try {
-        await mongoose.connect('mongodb://localhost/cars',{
+        await mongoose.connect('mongodb+srv://skymirs:skymirs@free-and-high-quality.slm38.mongodb.net/apartment',{
             useNewUrlParser: true,
             useFindAndModify: false,
             useUnifiedTopology: true
